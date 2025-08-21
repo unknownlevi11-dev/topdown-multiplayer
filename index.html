@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topdown Arena — Multiplayer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <div class="card">
+      <h1>Topdown Arena</h1>
+      <div id="menu">
+        <div class="row">
+          <label>Name</label>
+          <input id="playerName" maxlength="16" placeholder="Your name" />
+        </div>
+        <div class="row">
+          <label>Map</label>
+          <select id="mapSelect"></select>
+        </div>
+        <div class="row">
+          <button id="hostBtn">Host Game</button>
+        </div>
+        <div class="row">
+          <label>Join Code</label>
+          <input id="joinCode" maxlength="4" placeholder="ABCD" />
+          <button id="joinBtn">Join Game</button>
+        </div>
+        <p class="hint">Max 10 players per lobby • 4-letter codes • GitHub Pages + Firebase</p>
+      </div>
+      <div id="lobby" class="hidden">
+        <h2>Lobby <span id="lobbyCode"></span></h2>
+        <p>Share this code so others can join.</p>
+        <div id="players"></div>
+        <div class="row">
+          <button id="startBtn">Start Match</button>
+          <button id="leaveBtn" class="ghost">Leave</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="game" width="960" height="640"></canvas>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="config.js"></script>
+  <script src="maps.js"></script>
+  <script src="net.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

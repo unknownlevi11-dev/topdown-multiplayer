@@ -1,0 +1,18 @@
+
+* { box-sizing: border-box; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; }
+body { margin: 0; background: #0b0c10; color: #eaeaea; display: grid; place-items: center; min-height: 100vh; }
+#game { display: none; background: #1b1d24; border: 2px solid #2c2f36; box-shadow: 0 8px 30px rgba(0,0,0,.4); border-radius: 14px; }
+#ui { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: grid; place-items: center; padding: 16px; }
+.card { width: 520px; max-width: calc(100vw - 32px); background: #14161b; border: 1px solid #2b2e35; border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+h1 { margin: 0 0 12px; font-size: 28px; }
+h2 { margin: 0 0 8px; font-weight: 600; }
+.row { display: flex; gap: 10px; align-items: center; margin: 12px 0; }
+label { width: 80px; color: #b8c1cc; }
+input, select { flex: 1; background: #0f1116; color: #eaeaea; border: 1px solid #2b2e35; border-radius: 12px; padding: 10px 12px; outline: none; }
+button { background: #4f46e5; color: white; border: none; padding: 10px 14px; border-radius: 12px; cursor: pointer; font-weight: 600; }
+button.ghost { background: transparent; border: 1px solid #2b2e35; color: #cbd5e1; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+.hidden { display: none; }
+#players { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); gap: 8px; margin: 10px 0 16px; }
+.player-pill { padding: 8px 10px; border-radius: 10px; background: #0f1116; border: 1px solid #2b2e35; }
+.hint { color: #94a3b8; font-size: 12px; }
